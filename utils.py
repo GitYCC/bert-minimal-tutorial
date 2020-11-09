@@ -54,7 +54,7 @@ def tokenize_and_map(tokenizer, text):
         else:
             word = words.pop(0)
             word_tokens = tokenizer.tokenize(word)
-            if word_tokens == ['[UNK]']:
+            if len(word_tokens) == 0 or word_tokens == ['[UNK]']:
                 index_map_from_text_to_token += [len(tokens)] * len(word)
                 tokens.append('[UNK]')
                 del index_map_from_word[:len(word)]
