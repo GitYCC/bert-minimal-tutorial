@@ -18,21 +18,51 @@ class RunningAverage:
         self.values = []
 
 
-def tokenize_and_map(tokenizer, sentence):
-    tokens = tokenizer.tokenize(sentence)
-    index_map_from_sentence_to_token = []
+def wordize_and_map(text):
+    words = []
+    index_map_from_text_to_word = []
+    while len(text) > 0:
+        match_space = re.match(r'^ +', text)
+        if match_space:
+            space_str = match_space.group(0)
+            index_map_from_text_to_word += [None] * len(space_str)
+            text = text[len(space_str):]
+            continue
 
-    for i, token in enumerate(tokens):
-        tail = re.sub(r'^##', '', token) if token != '[UNK]' else r'[^ ]'
-        search_regex = r'^( *)(' + tail + r')'
-        match_obj = re.match(search_regex, sentence, flags=re.IGNORECASE)
-        if match_obj:
-            blank_len = len(match_obj.group(1))
-            tail_len = len(match_obj.group(2))
-            sentence = sentence[blank_len + tail_len:]
-            index_map_from_sentence_to_token += [None] * blank_len + [i] * tail_len
+        match_en = re.match(r'^[a-zA-Z0-9]+', text)
+        if match_en:
+            en_word = match_en.group(0)
+            index_map_from_text_to_word += [len(words)] * len(en_word)
+            words.append(en_word)
+            text = text[len(en_word):]
         else:
-            raise ValueError
-    index_map_from_sentence_to_token += [None] * len(sentence)
+            index_map_from_text_to_word += [len(words)]
+            words.append(text[0])
+            text = text[1:]
+    return words, index_map_from_text_to_word
 
-    return tokens, index_map_from_sentence_to_token
+
+def tokenize_and_map(tokenizer, text):
+    words, index_map_from_word = wordize_and_map(text)
+
+    tokens = []
+    index_map_from_text_to_token = []
+    while len(index_map_from_word) > 0:
+        if index_map_from_word[0] is None:
+            index_map_from_text_to_token.append(None)
+            del index_map_from_word[0]
+        else:
+            word = words.pop(0)
+            word_tokens = tokenizer.tokenize(word)
+            if word_tokens == ['[UNK]']:
+                index_map_from_text_to_token += [len(tokens)] * len(word)
+                tokens.append('[UNK]')
+                del index_map_from_word[:len(word)]
+            else:
+                for word_token in word_tokens:
+                    word_token_len = len(re.sub(r'^##', '', word_token))
+                    index_map_from_text_to_token += [len(tokens)] * word_token_len
+                    tokens.append(word_token)
+                    del index_map_from_word[:word_token_len]
+
+    return tokens, index_map_from_text_to_token
