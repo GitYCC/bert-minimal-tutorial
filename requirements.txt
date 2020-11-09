@@ -15,9 +15,9 @@ filelock==3.0.12          # via transformers
 future==0.18.2            # via torch
 idna==2.10                # via requests
 importlib-metadata==2.0.0  # via pluggy
-joblib==0.17.0            # via sacremoses
+joblib==0.17.0            # via sacremoses, scikit-learn
 more-itertools==8.6.0     # via pytest
-numpy==1.18.5             # via -r requirements.in, pandas, torch, transformers
+numpy==1.18.5             # via -r requirements.in, pandas, scikit-learn, scipy, seqeval, torch, transformers
 packaging==20.4           # via transformers
 pandas==1.1.4             # via -r requirements.in
 pluggy==0.13.1            # via pytest
@@ -32,8 +32,12 @@ pytz==2020.4              # via pandas
 regex==2020.10.28         # via sacremoses, transformers
 requests==2.24.0          # via transformers
 sacremoses==0.0.43        # via transformers
+scikit-learn==0.23.2      # via seqeval
+scipy==1.5.4              # via scikit-learn
 sentencepiece==0.1.94     # via transformers
+seqeval==1.2.2            # via -r requirements.in
 six==1.15.0               # via packaging, protobuf, pytest, python-dateutil, sacremoses
+threadpoolctl==2.1.0      # via scikit-learn
 tokenizers==0.9.2         # via transformers
 torch==1.7.0              # via -r requirements.in
 tqdm==4.41.1              # via -r requirements.in, sacremoses, transformers
