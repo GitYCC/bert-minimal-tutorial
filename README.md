@@ -6,6 +6,7 @@
 |--|--|--|--|
 |Single Sentence Classification: Sentiment Classification|CN|[Github](./notebooks/chinese_sentiment_classification.ipynb)|<a href="https://colab.research.google.com/github/GitYCC/bert-minimal-tutorial/blob/master/notebooks/chinese_sentiment_classification.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>|
 |Single Sentence Classification: Toxic Comment Multi-labels Classification|EN|[Github](./notebooks/toxic_comment_classification.ipynb)|<a href="https://colab.research.google.com/github/GitYCC/bert-minimal-tutorial/blob/master/notebooks/toxic_comment_classification.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>|
+|Single Sentence Tagging: Chinese Named Entity Recognition|CN|[Github](./notebooks/chinese_ner.ipynb)|<a href="https://colab.research.google.com/github/GitYCC/bert-minimal-tutorial/blob/master/notebooks/chinese_ner.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>|
 
 
 ## Dataset
