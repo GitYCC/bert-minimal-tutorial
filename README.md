@@ -14,3 +14,4 @@
 - `data/chinese_sentiment_classification.csv` from [bigboNed3/chinese_text_cnn](https://github.com/bigboNed3/chinese_text_cnn)
 - `data/toxic_comment_classification.csv` from [kaggle: jigsaw-toxic-comment-classification-challenge](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data?select=train.csv.zip)
 - `data/msra_train_bio.txt` from [OYE93/Chinese-NLP-Corpus](https://github.com/OYE93/Chinese-NLP-Corpus)
+- `data/afqmc_train.json` from [CLUEbenchmark/CLUE](https://github.com/CLUEbenchmark/CLUE)
