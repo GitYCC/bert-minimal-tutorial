@@ -18,3 +18,4 @@
 - `data/msra_train_bio.txt` from [OYE93/Chinese-NLP-Corpus](https://github.com/OYE93/Chinese-NLP-Corpus)
 - `data/afqmc_train.json` from [CLUEbenchmark/CLUE](https://github.com/CLUEbenchmark/CLUE)
 - `data/DRCD_training.json` from [DRCKnowledgeTeam/DRCD](https://github.com/DRCKnowledgeTeam/DRCD)
+- `data/cais.train` and `data/cais.train.intent` from [Adaxry/CM-Net](https://github.com/Adaxry/CM-Net)
