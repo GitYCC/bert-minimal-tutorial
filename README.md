@@ -9,7 +9,7 @@
 |Single Sentence Tagging: Chinese Named Entity Recognition|CN|[Github](./notebooks/chinese_ner.ipynb)|<a href="https://colab.research.google.com/github/GitYCC/bert-minimal-tutorial/blob/master/notebooks/chinese_ner.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>|
 |Sentence Pair Classification: Financial Question Matching|CN|[Github](./notebooks/financial_question_matching.ipynb)|<a href="https://colab.research.google.com/github/GitYCC/bert-minimal-tutorial/blob/master/notebooks/financial_question_matching.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>|
 |Question Answering: Reading Comprehension|CN|[Github](./notebooks/chinese_qa.ipynb)|<a href="https://colab.research.google.com/github/GitYCC/bert-minimal-tutorial/blob/master/notebooks/chinese_qa.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>|
-
+|Intent Detection and Slot Filling|CN|[Github](./notebooks/intent_detection_and_slot_filling.ipynb)|<a href="https://colab.research.google.com/github/GitYCC/bert-minimal-tutorial/blob/master/notebooks/intent_detection_and_slot_filling.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>|
 
 ## Dataset
 
